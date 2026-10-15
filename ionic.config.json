@@ -1,0 +1,7 @@
+{
+  "name": "BandPick",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

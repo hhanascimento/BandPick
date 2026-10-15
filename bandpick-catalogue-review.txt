@@ -1,0 +1,816 @@
+BANDPICK — CATALOGUE REVIEW
+
+12 genres x 50 acts = 600 slots. Every act appears in exactly one genre.
+
+HOW TO READ THIS
+  A plain line is a band.
+  [SOLO]        a household-name solo artist kept on purpose (bands-only game).
+  [SET BY HAND] the genre was chosen by hand, not by the automatic rule.
+  "also in:"    the other genres Wikidata also files this act under. Every
+                one of these was decided in favour of the genre it sits in,
+                so this is the list to scan when something looks mis-filed.
+  The QID is the Wikidata id — the unambiguous way to name an entry.
+
+HOW TO REPLY
+  Name the moves you want, e.g. "move 42 in Rock to Indie", or "cut pop
+  3, 17". A cut is refilled from the reserves listed under each genre.
+
+
+==============================================================================
+✨ POP  —  50 acts · 40 bands · 10 solo · 1 set by hand
+==============================================================================
+  1. Michael Jackson [SOLO]  (Q2831)   also in: rock, rnb-soul
+  2. The Carpenters [SET BY HAND]  (Q223495)   also in: rock
+  3. Madonna [SOLO]  (Q1744)   also in: electronic, jazz
+  4. Taylor Swift [SOLO]  (Q26876)   also in: country
+  5. ABBA  (Q18233)
+  6. Céline Dion [SOLO]  (Q5105)   also in: rock, electronic
+  7. Britney Spears [SOLO]  (Q11975)   also in: electronic
+  8. Adele [SOLO]  (Q23215)   also in: rock, rnb-soul, jazz
+  9. Cher [SOLO]  (Q12003)   also in: rock
+ 10. Elton John [SOLO]  (Q2808)   also in: rock, rnb-soul
+ 11. George Michael [SOLO]  (Q130311)   also in: rnb-soul, jazz
+ 12. Ed Sheeran [SOLO]  (Q47447)   also in: rock, hip-hop, rnb-soul
+ 13. Spice Girls  (Q55641)
+ 14. Pussy Riot  (Q7551)
+ 15. Backstreet Boys  (Q17140)
+ 16. Jonas Brothers  (Q134233)
+ 17. The Pussycat Dolls  (Q102385)
+ 18. Take That  (Q152066)
+ 19. Westlife  (Q151241)
+ 20. Ace of Base  (Q151634)
+ 21. Boyzone  (Q213495)
+ 22. Fifth Harmony  (Q3087893)
+ 23. Wham!  (Q744087)
+ 24. Sugababes  (Q193697)
+ 25. Laibach  (Q325359)
+ 26. Jedward  (Q201811)
+ 27. Girls Aloud  (Q205473)
+ 28. Aqua  (Q213388)
+ 29. RBD  (Q211528)
+ 30. New Kids on the Block  (Q212464)
+ 31. Atomic Kitten  (Q208392)
+ 32. Dschinghis Khan  (Q106861)
+ 33. Milli Vanilli  (Q850540)
+ 34. Babymetal  (Q11190781)
+ 35. SunStroke Project  (Q683473)
+ 36. The Tolmachevy Twins  (Q1140101)
+ 37. Culture Club  (Q50037)
+ 38. El Sueño de Morfeo  (Q288341)
+ 39. Brotherhood of Man  (Q832745)
+ 40. Bucks Fizz  (Q839831)
+ 41. Baccara  (Q753066)
+ 42. Katseye  (Q123480242)
+ 43. Alexandrov Ensemble  (Q620990)
+ 44. All Saints  (Q165386)
+ 45. 3+2  (Q222978)
+ 46. Arashi  (Q626440)
+ 47. Ogene  (Q2294806)
+ 48. The Righteous Brothers  (Q610228)
+ 49. No Angels  (Q155123)
+ 50. Big Time Rush  (Q752419)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Sonny & Cher  (Q907445)
+  R 2. Bzikebi  (Q1991579)
+  R 3. Feminnem  (Q515007)
+  R 4. Urban Symphony  (Q539956)
+  R 5. Teach-In  (Q846517)
+  R 6. Ell & Nikki  (Q12009)
+  R 7. The Kelly Family  (Q169516)
+  R 8. Musiqq  (Q216463)
+  R 9. Hurricane  (Q74590294)
+  R10. Rouge  (Q503205)
+
+==============================================================================
+🎸 ROCK  —  50 acts · 39 bands · 11 solo · 1 set by hand
+==============================================================================
+  1. The Beatles  (Q1299)   also in: pop
+  2. Elvis Presley [SOLO]  (Q303)   also in: pop, rnb-soul, country
+  3. Queen  (Q15862)   also in: metal
+  4. Bob Dylan [SOLO]  (Q392)   also in: country, jazz
+  5. John Lennon [SOLO]  (Q1203)   also in: pop
+  6. Paul McCartney [SOLO]  (Q2599)
+  7. The Rolling Stones  (Q11036)   also in: rnb-soul
+  8. David Bowie [SOLO]  (Q5383)   also in: pop, electronic, rnb-soul, indie-alt
+  9. Kurt Cobain [SOLO]  (Q8446)   also in: indie-alt
+ 10. Led Zeppelin  (Q2331)
+ 11. Bruce Springsteen [SOLO]  (Q1225)
+ 12. Red Hot Chili Peppers  (Q10708)   also in: metal, indie-alt
+ 13. Eric Clapton [SOLO]  (Q48187)
+ 14. Janis Joplin [SOLO]  (Q1514)   also in: rnb-soul, country
+ 15. Mick Jagger [SOLO]  (Q128121)   also in: rnb-soul
+ 16. Sting [SOLO]  (Q483203)   also in: pop, jazz, reggae
+ 17. Green Day  (Q47871)   also in: indie-alt
+ 18. The Who  (Q93346)   also in: rnb-soul
+ 19. Duran Duran [SET BY HAND]  (Q58381)   also in: metal, indie-alt
+ 20. Bon Jovi  (Q259254)
+ 21. Dire Straits  (Q50040)
+ 22. The Beach Boys  (Q183048)   also in: pop
+ 23. Oasis  (Q382890)   also in: indie-alt
+ 24. The Velvet Underground  (Q103550)   also in: indie-alt
+ 25. Bee Gees  (Q133405)   also in: pop, rnb-soul
+ 26. The Cranberries  (Q483810)   also in: indie-alt
+ 27. Fleetwood Mac  (Q106648)   also in: pop
+ 28. Momoiro Clover Z  (Q1070606)   also in: pop
+ 29. The Police  (Q178095)
+ 30. Roxette  (Q173790)   also in: pop
+ 31. The Kinks  (Q188713)
+ 32. Creedence Clearwater Revival  (Q192463)
+ 33. Blondie  (Q202741)
+ 34. Jefferson Airplane  (Q488260)
+ 35. ZZ Top  (Q136591)
+ 36. The Strokes  (Q211583)   also in: indie-alt
+ 37. Grateful Dead  (Q212533)
+ 38. No Doubt  (Q43259)   also in: pop, indie-alt
+ 39. Weezer  (Q209956)   also in: indie-alt
+ 40. Cream  (Q203736)   also in: metal
+ 41. The Roop  (Q85230489)   also in: pop
+ 42. Status Quo  (Q322265)
+ 43. Chicago  (Q371938)   also in: jazz
+ 44. Foreigner  (Q275059)
+ 45. The Monkees  (Q464036)
+ 46. Kaiser Chiefs  (Q192308)   also in: indie-alt
+ 47. Mumford & Sons  (Q953918)   also in: country
+ 48. Supertramp  (Q176457)
+ 49. Katrina and the Waves  (Q934582)   also in: pop
+ 50. Savage Garden  (Q493710)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. The Pretenders  (Q667389)
+  R 2. The Band  (Q600344)
+  R 3. The Shadows  (Q212168)
+  R 4. Traveling Wilburys  (Q332399)
+  R 5. Steely Dan  (Q852435)
+  R 6. The Temptations  (Q846373)
+  R 7. Enon  (Q208031)
+  R 8. Heart  (Q941662)
+  R 9. Men at Work  (Q831111)
+  R10. The Cars  (Q858388)
+
+==============================================================================
+🎤 HIP-HOP & RAP  —  50 acts · 47 bands · 3 solo
+==============================================================================
+  1. Eminem [SOLO]  (Q5608)
+  2. Snoop Dogg [SOLO]  (Q6096)   also in: reggae
+  3. Drake [SOLO]  (Q33240)   also in: pop
+  4. Black Eyed Peas  (Q134541)   also in: pop, latin
+  5. Destiny's Child  (Q153056)   also in: rnb-soul
+  6. Beastie Boys  (Q214039)
+  7. LMFAO  (Q48978)   also in: pop, electronic
+  8. TLC  (Q742804)   also in: pop, rnb-soul
+  9. Kalush  (Q118835746)
+ 10. G-Unit  (Q308644)
+ 11. Major Lazer  (Q2604214)   also in: electronic
+ 12. A Tribe Called Quest  (Q300602)
+ 13. Kneecap  (Q65327538)
+ 14. Madcon  (Q842152)   also in: pop, reggae
+ 15. The KLF  (Q741316)   also in: electronic
+ 16. Soul Militia  (Q927486)
+ 17. Bad Meets Evil  (Q741532)
+ 18. Far East Movement  (Q104625)
+ 19. Three 6 Mafia  (Q1027165)
+ 20. Bone Thugs-n-Harmony  (Q4444669)
+ 21. De La Soul  (Q685595)
+ 22. Trackshittaz  (Q699525)
+ 23. En Vogue  (Q1137304)   also in: pop, rnb-soul
+ 24. Karmin  (Q1167969)   also in: pop
+ 25. WayV  (Q60062907)   also in: rnb-soul
+ 26. N.E.R.D.  (Q941293)   also in: latin
+ 27. Insane Clown Posse  (Q929731)
+ 28. Rae Sremmurd  (Q18123226)   also in: pop
+ 29. Bomfunk MC's  (Q637865)
+ 30. Salt-N-Pepa  (Q1545961)
+ 31. The Sugarhill Gang  (Q1413494)
+ 32. The Neptunes  (Q866207)   also in: pop
+ 33. Outlandish  (Q586885)
+ 34. Arrested Development  (Q699534)
+ 35. TNMK  (Q2388470)
+ 36. Digital Underground  (Q605778)
+ 37. Run the Jewels  (Q15052731)
+ 38. Danity Kane  (Q1060468)   also in: rnb-soul
+ 39. Grandmaster Flash and the Furious Five  (Q765409)
+ 40. Tha Dogg Pound  (Q1070141)
+ 41. Chase & Status  (Q1067983)
+ 42. Stereo MCs  (Q942532)
+ 43. Suprême NTM  (Q1479960)
+ 44. Yellow Claw  (Q15613707)
+ 45. City Girls  (Q60658858)
+ 46. DJ Jazzy Jeff & the Fresh Prince  (Q1154136)   also in: rnb-soul
+ 47. New Edition  (Q1370588)   also in: pop, rnb-soul
+ 48. The Avalanches  (Q2000851)   also in: electronic
+ 49. Nico & Vinz  (Q11967617)   also in: pop, rnb-soul
+ 50. Naughty by Nature  (Q785051)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Bars and Melody  (Q17149948)
+  R 2. Fettes Brot  (Q496214)
+  R 3. Orishas  (Q646036)
+  R 4. Sexion d'Assaut  (Q762966)
+  R 5. DAM  (Q921865)
+  R 6. Looptroop Rockers  (Q1652203)
+  R 7. IAM  (Q1653033)
+  R 8. The Cheetah Girls  (Q1771590)
+  R 9. Twiztid  (Q1849210)
+  R10. Miyagi & Andy Panda  (Q52686724)
+
+==============================================================================
+🎛️ ELECTRONIC & DANCE  —  50 acts · 47 bands · 3 solo
+==============================================================================
+  1. Björk [SOLO]  (Q42455)   also in: rock, indie-alt
+  2. Avicii [SOLO]  (Q505476)   also in: pop
+  3. Daft Punk  (Q185828)
+  4. t.A.T.u.  (Q161723)   also in: pop
+  5. Kraftwerk  (Q44892)
+  6. Pet Shop Boys  (Q485625)
+  7. Jethro Tull  (Q192353)
+  8. New Order  (Q214990)
+  9. The Chainsmokers  (Q7721993)
+ 10. Die Antwoord  (Q23376)
+ 11. O-Zone  (Q4562)   also in: pop
+ 12. Swedish House Mafia  (Q20709)
+ 13. Kygo [SOLO]  (Q16845512)
+ 14. Röyksopp  (Q193218)   also in: pop
+ 15. Tangerine Dream  (Q153616)
+ 16. The Human League  (Q730158)
+ 17. M83  (Q615471)
+ 18. Scissor Sisters  (Q464109)   also in: pop
+ 19. Frankie Goes to Hollywood  (Q73597)
+ 20. KEiiNO  (Q61009979)   also in: pop
+ 21. Morcheeba  (Q749019)
+ 22. Dimitri Vegas & Like Mike  (Q5807252)
+ 23. Animal Collective  (Q547272)
+ 24. Krewella  (Q72349)
+ 25. Subwoolfer  (Q110821048)   also in: pop
+ 26. Akcent  (Q416934)
+ 27. Tvorchi  (Q67290768)
+ 28. AAA  (Q280732)
+ 29. Gotan Project  (Q746955)
+ 30. Deep Forest  (Q1133600)
+ 31. Soft Cell  (Q1329303)   also in: pop
+ 32. Showtek  (Q1067714)
+ 33. Technotronic  (Q1344793)
+ 34. Triana Park  (Q16353980)
+ 35. Scooch  (Q1333249)
+ 36. Fusedmarc  (Q28929856)
+ 37. ZiBBZ  (Q47691802)
+ 38. Electric Fields  (Q61746750)   also in: rnb-soul
+ 39. Suicide  (Q285108)
+ 40. Zero 7  (Q191915)
+ 41. Axwell Λ Ingrosso  (Q18148701)
+ 42. VAL  (Q86612187)   also in: rnb-soul
+ 43. IC3PEAK  (Q48948662)
+ 44. 808 State  (Q271283)
+ 45. Blutengel  (Q316873)
+ 46. Telex  (Q615867)
+ 47. Caravan Palace  (Q1035442)
+ 48. BWO  (Q507914)   also in: pop
+ 49. Londonbeat  (Q1869183)   also in: rnb-soul
+ 50. Leftfield  (Q277479)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Unheilig  (Q707968)
+  R 2. Deep Zone Project  (Q903346)
+  R 3. Nero  (Q1066310)
+  R 4. Masterboy  (Q125746)
+  R 5. D.A.F.  (Q701692)
+  R 6. Baha Men  (Q788589)
+  R 7. Sylver  (Q918142)
+  R 8. Bini  (Q29966238)
+  R 9. Delerium  (Q903496)
+  R10. Juno Reactor  (Q1410018)
+
+==============================================================================
+💜 R&B & SOUL  —  50 acts · 41 bands · 9 solo
+==============================================================================
+  1. Whitney Houston [SOLO]  (Q34389)   also in: pop
+  2. Amy Winehouse [SOLO]  (Q15897)   also in: jazz, reggae
+  3. Aretha Franklin [SOLO]  (Q125121)   also in: pop, jazz
+  4. Tina Turner [SOLO]  (Q131814)   also in: pop, rock, country
+  5. Prince [SOLO]  (Q7542)   also in: rock, jazz
+  6. Ray Charles [SOLO]  (Q544387)   also in: country, jazz
+  7. Stevie Wonder [SOLO]  (Q714)   also in: pop, jazz
+  8. Usher [SOLO]  (Q165911)   also in: pop, hip-hop
+  9. Boney M.  (Q156298)   also in: pop, reggae
+ 10. John Legend [SOLO]  (Q44857)   also in: pop
+ 11. The Jackson 5  (Q43267)   also in: pop
+ 12. The Supremes  (Q218837)   also in: pop
+ 13. The Animals  (Q131422)
+ 14. Earth, Wind & Fire  (Q28974)
+ 15. The Moody Blues  (Q211965)
+ 16. The Yardbirds  (Q192725)
+ 17. Kool & The Gang  (Q850290)   also in: jazz
+ 18. Mamamoo  (Q17278068)   also in: pop, jazz
+ 19. Simply Red  (Q339430)   also in: pop
+ 20. The Ronettes  (Q530886)
+ 21. The Platters  (Q753905)
+ 22. Gym Class Heroes  (Q818377)
+ 23. Sade  (Q658182)   also in: pop, jazz
+ 24. The Coasters  (Q1427216)
+ 25. Chic  (Q516712)
+ 26. Lukas Graham  (Q300935)   also in: pop
+ 27. Booker T. & the M.G.'s  (Q893007)   also in: jazz
+ 28. JLS  (Q1165439)   also in: pop
+ 29. The Shirelles  (Q1353426)
+ 30. The Drifters  (Q1060576)   also in: pop
+ 31. Martha and the Vandellas  (Q1326522)
+ 32. The Blues Brothers  (Q1344949)
+ 33. Norma John  (Q27581209)   also in: pop
+ 34. The Isley Brothers  (Q178134)
+ 35. Sister Sledge  (Q1070743)
+ 36. The Osmonds  (Q1543041)
+ 37. Alabama Shakes  (Q1933051)
+ 38. Four Tops  (Q653480)   also in: pop
+ 39. The Mills Brothers  (Q1206839)   also in: jazz
+ 40. 3T  (Q29779)
+ 41. Girlicious  (Q869114)
+ 42. The Crystals  (Q1475018)   also in: pop
+ 43. Sam & Dave  (Q1545232)
+ 44. The Staple Singers  (Q935884)
+ 45. The Pretty Things  (Q1364657)
+ 46. The Ink Spots  (Q127140)
+ 47. The 5th Dimension  (Q1753111)   also in: pop
+ 48. SWV  (Q1679412)
+ 49. Silk Sonic  (Q105813956)
+ 50. The Tokens  (Q28231)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Hot Chocolate  (Q1368881)
+  R 2. The O'Jays  (Q1749011)
+  R 3. War  (Q2295871)
+  R 4. The Weather Girls  (Q707161)
+  R 5. Ashford & Simpson  (Q725246)
+  R 6. Ibeyi  (Q16800947)
+  R 7. Guru Guru  (Q678142)
+  R 8. The Delfonics  (Q2000558)
+  R 9. Rauf & Faik  (Q62034003)
+  R10. The Gap Band  (Q992295)
+
+==============================================================================
+🤘 METAL  —  50 acts · 47 bands · 3 solo · 1 set by hand
+==============================================================================
+  1. Lordi  (Q23471)
+  2. Motörhead  (Q19697)
+  3. Metallica  (Q15920)
+  4. Linkin Park [SET BY HAND]  (Q261)   also in: pop, hip-hop, indie-alt
+  5. Iron Maiden  (Q42482)
+  6. Ozzy Osbourne [SOLO]  (Q133151)
+  7. Black Sabbath  (Q47670)
+  8. Aerosmith  (Q126826)
+  9. Judas Priest  (Q83468)
+ 10. System of a Down  (Q45165)
+ 11. Scorpions  (Q124147)
+ 12. Ronnie James Dio [SOLO]  (Q185151)
+ 13. Lemmy [SOLO]  (Q309926)   also in: rock
+ 14. Soundgarden  (Q174817)   also in: indie-alt
+ 15. Avenged Sevenfold  (Q165193)
+ 16. Europe  (Q185144)
+ 17. Manowar  (Q156049)
+ 18. Disturbed  (Q131366)
+ 19. Anthrax  (Q109871)
+ 20. Bullet for My Valentine  (Q485385)
+ 21. Rush  (Q203871)   also in: indie-alt
+ 22. Mötley Crüe  (Q486688)
+ 23. X Japan  (Q179767)
+ 24. Venom  (Q192861)
+ 25. Accept  (Q25507)
+ 26. Godsmack  (Q207306)
+ 27. HammerFall  (Q274593)
+ 28. Blue Öyster Cult  (Q331016)
+ 29. Dio  (Q478750)
+ 30. Mastodon  (Q548844)
+ 31. Twisted Sister  (Q272239)
+ 32. Trivium  (Q390684)
+ 33. Steppenwolf  (Q465862)
+ 34. The Pretty Reckless  (Q837300)   also in: indie-alt
+ 35. Skid Row  (Q461269)
+ 36. Aria  (Q785828)
+ 37. Mercyful Fate  (Q647370)
+ 38. Saxon  (Q504090)
+ 39. Iced Earth  (Q728109)
+ 40. Gamma Ray  (Q154129)
+ 41. W.A.S.P.  (Q467673)
+ 42. Staind  (Q266496)
+ 43. Powerwolf  (Q706748)
+ 44. Queensrÿche  (Q462380)
+ 45. Band-Maid  (Q17222593)
+ 46. Annihilator  (Q567086)
+ 47. Heaven & Hell  (Q742626)
+ 48. Nevermore  (Q130563)
+ 49. Parkway Drive  (Q282855)
+ 50. Volbeat  (Q279105)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Dokken  (Q831041)
+  R 2. All That Remains  (Q654147)
+  R 3. Primal Fear  (Q163112)
+  R 4. Metal Church  (Q212448)
+  R 5. Black Label Society  (Q727736)
+  R 6. Teräsbetoni  (Q744274)
+  R 7. Rage  (Q312428)
+  R 8. Diamond Head  (Q552377)
+  R 9. Grave Digger  (Q571672)
+  R10. Krokus  (Q225538)
+
+==============================================================================
+🤠 COUNTRY  —  50 acts · 44 bands · 6 solo
+==============================================================================
+  1. Johnny Cash [SOLO]  (Q42775)
+  2. Kenny Rogers [SOLO]  (Q217160)   also in: pop, rock
+  3. Shania Twain [SOLO]  (Q131433)   also in: pop, rock
+  4. Willie Nelson [SOLO]  (Q206112)   also in: pop, rock
+  5. Reba McEntire [SOLO]  (Q229430)
+  6. Garth Brooks [SOLO]  (Q216288)
+  7. Ha*Ash  (Q5494459)   also in: pop
+  8. The Everly Brothers  (Q690138)
+  9. Lady A  (Q389870)
+ 10. The Chicks  (Q142636)
+ 11. Rednex  (Q329459)
+ 12. Remember Monday  (Q133137918)
+ 13. The Highwaymen  (Q261341)
+ 14. Florida Georgia Line  (Q3644642)
+ 15. Poco  (Q548990)
+ 16. Texas Lightning  (Q657546)
+ 17. The Flying Burrito Brothers  (Q200769)
+ 18. Carter Family  (Q1412029)
+ 19. Alabama  (Q2140332)
+ 20. Zac Brown Band  (Q139154)
+ 21. Sugarland  (Q1200415)
+ 22. Little Big Town  (Q607317)
+ 23. Little Feat  (Q946124)
+ 24. The Band Perry  (Q1460017)
+ 25. Brooks & Dunn  (Q929683)
+ 26. Les Humphries Singers  (Q673735)   also in: pop
+ 27. The High Kings  (Q1189396)
+ 28. Dan + Shay  (Q16959408)
+ 29. Nitty Gritty Dirt Band  (Q542367)
+ 30. The Bellamy Brothers  (Q815801)
+ 31. Nickel Creek  (Q1895390)
+ 32. Blackberry Smoke  (Q4035173)
+ 33. Montgomery Gentry  (Q1190454)
+ 34. Punch Brothers  (Q82179)
+ 35. The Wreckers  (Q1857842)
+ 36. Asleep at the Wheel  (Q732733)
+ 37. Gloriana  (Q946099)
+ 38. The Browns  (Q2410071)
+ 39. Old Crow Medicine Show  (Q7083804)
+ 40. Supersuckers  (Q1611056)
+ 41. Lasse Stefanz  (Q742028)
+ 42. Mississippi Sheiks  (Q938570)
+ 43. The Judds  (Q1755990)
+ 44. Carolina Chocolate Drops  (Q1044384)
+ 45. Rusted Root  (Q2316071)
+ 46. The Shorts  (Q1968931)
+ 47. Wizex  (Q644876)
+ 48. The Mavericks  (Q951665)
+ 49. Lonestar  (Q1869293)
+ 50. Ian & Sylvia  (Q1655684)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Brothers Osborne  (Q16208058)
+  R 2. Home Free  (Q16844555)
+  R 3. The Oak Ridge Boys  (Q2008427)
+  R 4. Pistol Annies  (Q3905806)
+  R 5. Moriarty  (Q919230)
+  R 6. SHeDAISY  (Q2465263)
+  R 7. Van Zant  (Q3511062)
+  R 8. Joey + Rory  (Q6214254)
+  R 9. Thompson Square  (Q211530)
+  R10. Exile  (Q363873)
+
+==============================================================================
+🎷 JAZZ  —  50 acts · 26 bands · 24 solo
+==============================================================================
+  1. Louis Armstrong [SOLO]  (Q1779)
+  2. Frank Sinatra [SOLO]  (Q40912)
+  3. Ella Fitzgerald [SOLO]  (Q1768)   also in: rnb-soul
+  4. Miles Davis [SOLO]  (Q93341)
+  5. Billie Holiday [SOLO]  (Q104358)
+  6. Duke Ellington [SOLO]  (Q4030)
+  7. Nina Simone [SOLO]  (Q174957)   also in: rnb-soul
+  8. Nat King Cole [SOLO]  (Q137042)
+  9. Charlie Parker [SOLO]  (Q103767)
+ 10. John Coltrane [SOLO]  (Q7346)
+ 11. Dizzy Gillespie [SOLO]  (Q49575)
+ 12. Django Reinhardt [SOLO]  (Q44122)
+ 13. Benny Goodman [SOLO]  (Q46755)
+ 14. Glenn Miller [SOLO]  (Q103651)
+ 15. Thelonious Monk [SOLO]  (Q109612)
+ 16. Herbie Hancock [SOLO]  (Q105875)   also in: rnb-soul
+ 17. Dave Brubeck [SOLO]  (Q108597)
+ 18. Oscar Peterson [SOLO]  (Q105349)
+ 19. Chet Baker [SOLO]  (Q2274)
+ 20. Count Basie [SOLO]  (Q107008)
+ 21. Bill Evans [SOLO]  (Q208205)
+ 22. Sarah Vaughan [SOLO]  (Q229513)
+ 23. Stan Getz [SOLO]  (Q30587)
+ 24. Sonny Rollins [SOLO]  (Q299208)
+ 25. OutKast  (Q472595)
+ 26. Last Pizza Slice  (Q110966462)
+ 27. Iriao  (Q47008596)
+ 28. Pink Martini  (Q1543576)   also in: latin
+ 29. Pentangle  (Q1427551)
+ 30. Original Dixieland Jass Band  (Q933710)
+ 31. The Manhattan Transfer  (Q1431787)
+ 32. Witloof Bay  (Q371893)
+ 33. Incognito  (Q615207)
+ 34. The Boswell Sisters  (Q894612)
+ 35. Return to Forever  (Q1065887)   also in: latin
+ 36. Yellowjackets  (Q1632876)
+ 37. Postmodern Jukebox  (Q19655814)
+ 38. The Brand New Heavies  (Q608233)
+ 39. Naked City  (Q973995)
+ 40. The Cinematic Orchestra  (Q1087300)
+ 41. Melt-Banana  (Q1119071)   also in: latin
+ 42. Tokyo Ska Paradise Orchestra  (Q610696)
+ 43. Koop  (Q1475292)
+ 44. Pomplamoose  (Q2103516)
+ 45. Esbjörn Svensson Trio  (Q287061)
+ 46. Medeski Martin & Wood  (Q1916133)
+ 47. Capsule  (Q306509)
+ 48. Touch and Go  (Q1367299)
+ 49. The Bad Plus  (Q1381646)
+ 50. Shakatak  (Q72099)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Bohren & der Club of Gore  (Q566555)
+  R 2. Big Bad Voodoo Daddy  (Q858464)
+  R 3. The Cat Empire  (Q1539053)
+  R 4. GoGo Penguin  (Q18151740)
+  R 5. The Dave Brubeck Quartet  (Q264163)
+  R 6. The Rippingtons  (Q913590)
+  R 7. Masada  (Q932475)
+  R 8. Pat Metheny Group  (Q985460)
+  R 9. Kroke  (Q1653864)
+  R10. Marlango  (Q1778610)
+
+==============================================================================
+🌴 REGGAE  —  50 acts · 46 bands · 4 solo
+==============================================================================
+  1. Bob Marley [SOLO]  (Q409)
+  2. The Clash  (Q125603)
+  3. Jimmy Cliff [SOLO]  (Q109063)
+  4. Peter Tosh [SOLO]  (Q273049)
+  5. Shaggy [SOLO]  (Q310763)
+  6. UB40  (Q560153)   also in: pop
+  7. Madness  (Q745741)   also in: pop
+  8. Bad Brains  (Q798671)
+  9. Dubioza kolektiv  (Q1263054)
+ 10. Toots and the Maytals  (Q845465)
+ 11. Bob Marley & The Wailers  (Q2525354)
+ 12. Inner Circle  (Q613838)
+ 13. Black Uhuru  (Q804260)
+ 14. Aswad  (Q752530)
+ 15. Ojos de Brujo  (Q576420)
+ 16. The Wailers  (Q383016)
+ 17. Culture  (Q729495)
+ 18. Massilia Sound System  (Q1391133)
+ 19. Dub Inc  (Q1262801)
+ 20. The Abyssinians  (Q1535896)
+ 21. Tryo  (Q1752957)
+ 22. Sly and Robbie  (Q576723)
+ 23. Israel Vibration  (Q958875)
+ 24. UMA2RMAN  (Q1288444)
+ 25. SOJA  (Q2298729)
+ 26. The Congos  (Q1725152)
+ 27. Charlie Brown Jr.  (Q1066845)
+ 28. Sinsemilia  (Q2033839)
+ 29. Paprika Korps  (Q370606)
+ 30. Chaka Demus & Pliers  (Q1059270)
+ 31. Pidżama Porno  (Q1231208)
+ 32. Third World  (Q1816034)
+ 33. I Threes  (Q1652871)
+ 34. Skank  (Q2245893)
+ 35. Ziggy Marley and the Melody Makers  (Q2734923)
+ 36. Irie Révoltés  (Q526259)
+ 37. The Ethiopians  (Q629184)
+ 38. Musical Youth  (Q744781)
+ 39. Chino & Nacho  (Q1074403)   also in: pop, latin
+ 40. Roots Radics  (Q1091811)
+ 41. The Gladiators  (Q1777926)
+ 42. Mighty Diamonds  (Q3091730)
+ 43. Bedouin Soundclash  (Q813941)
+ 44. Ras Cory  (Q1699208)
+ 45. Svenska Akademien  (Q2301514)
+ 46. Quartiere Coffee  (Q20008416)
+ 47. Txarango  (Q19694152)   also in: pop, latin
+ 48. Easy Star All-Stars  (Q508350)
+ 49. The Aggrolites  (Q203062)
+ 50. Shōnan no Kaze  (Q1138525)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Cidade Negra  (Q1091706)
+  R 2. T.O.K.  (Q1383312)
+  R 3. Natiruts  (Q1819041)
+  R 4. Oques Grasses  (Q20108558)
+  R 5. Misty in Roots  (Q953783)
+  R 6. O Rappa  (Q2059219)
+  R 7. Sumo  (Q632499)
+  R 8. Touré Kunda  (Q3535582)
+  R 9. Mauresca Fracàs Dub  (Q3300267)
+  R10. Rebelution  (Q3421778)
+
+==============================================================================
+🔥 LATIN  —  50 acts · 45 bands · 5 solo
+==============================================================================
+  1. Enrique Iglesias [SOLO]  (Q47122)   also in: pop, rnb-soul
+  2. Julio Iglesias [SOLO]  (Q122003)   also in: pop, country
+  3. Karol G [SOLO]  (Q22001324)
+  4. J Balvin [SOLO]  (Q966845)
+  5. Gipsy Kings  (Q40586)
+  6. Santana  (Q873384)
+  7. Cypress Hill  (Q322196)
+  8. Anitta [SOLO]  (Q13476301)
+  9. Cartel de Santa  (Q2940549)
+ 10. Las Ketchup  (Q161245)   also in: pop
+ 11. Kinto Sol  (Q3197224)
+ 12. Control Machete  (Q1129179)
+ 13. Mandinga  (Q634263)
+ 14. Aventura  (Q782889)
+ 15. Los del Río  (Q170252)
+ 16. Maná  (Q584066)
+ 17. Buena Vista Social Club  (Q842415)
+ 18. Akwid  (Q2829184)
+ 19. Nouvelle Vague  (Q831029)
+ 20. Ill Niño  (Q866410)
+ 21. Thievery Corporation  (Q546930)
+ 22. CNCO  (Q26270552)
+ 23. Rodrigo y Gabriela  (Q1469093)
+ 24. Quilapayún  (Q1140278)
+ 25. Os Mutantes  (Q1325248)
+ 26. Premiata Forneria Marconi  (Q917450)
+ 27. Inti-Illimani  (Q1068887)
+ 28. Chambao  (Q1060648)
+ 29. Estopa  (Q773703)
+ 30. Reik  (Q2357594)
+ 31. Kjarkas  (Q1516791)
+ 32. Orchestra Baobab  (Q263471)
+ 33. Tanxugueiras  (Q61389754)
+ 34. Jarabe de Palo  (Q1479077)
+ 35. Bersuit Vergarabat  (Q782457)
+ 36. Marquess  (Q199999)
+ 37. Los Van Van  (Q1870602)
+ 38. Tito & Tarantula  (Q1538766)
+ 39. Bomba Estéreo  (Q887911)
+ 40. Bellini  (Q362558)
+ 41. Olodum  (Q2021108)
+ 42. Ozomatli  (Q678338)
+ 43. Barricada  (Q2574210)
+ 44. Lou Dalfin  (Q2360490)
+ 45. Triana  (Q598585)
+ 46. Milladoiro  (Q1689353)
+ 47. Caifanes  (Q1025839)
+ 48. La Compagnie Créole  (Q3207655)
+ 49. Grupo Niche  (Q1550909)
+ 50. Camila  (Q1028918)   also in: pop
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Timbiriche  (Q939151)
+  R 2. Quarteto em Cy  (Q844579)
+  R 3. Nadau  (Q41401)
+  R 4. Tribalistas  (Q1779630)
+  R 5. Son by Four  (Q2737293)
+  R 6. El Gran Combo de Puerto Rico  (Q913059)
+  R 7. Novos Baianos  (Q76825)
+  R 8. Kudai  (Q2707726)
+  R 9. Aterciopelados  (Q754549)
+  R10. Pandora  (Q266940)
+
+==============================================================================
+🎧 INDIE & ALTERNATIVE  —  50 acts · 50 bands · 0 solo · 1 set by hand
+==============================================================================
+  1. Paramore  (Q473466)
+  2. U2  (Q396)
+  3. Nirvana  (Q11649)
+  4. Coldplay  (Q45188)   also in: pop
+  5. 30 Seconds to Mars  (Q40585)
+  6. Radiohead [SET BY HAND]  (Q44190)
+  7. Depeche Mode  (Q482964)
+  8. Muse (band)  (Q22151)
+  9. Maroon 5  (Q182223)   also in: pop
+ 10. The Prodigy  (Q7256860)
+ 11. Evanescence  (Q1777698)
+ 12. The Cure  (Q484427)
+ 13. Nine Inch Nails  (Q11647)
+ 14. Blink-182  (Q482477)
+ 15. Arctic Monkeys  (Q170599)
+ 16. The Killers  (Q220730)
+ 17. My Chemical Romance  (Q483285)
+ 18. R.E.M.  (Q134969)
+ 19. Tokio Hotel  (Q386216)
+ 20. Foo Fighters  (Q483718)
+ 21. Nickelback  (Q483802)
+ 22. Alice in Chains  (Q484255)
+ 23. OneRepublic  (Q1438730)
+ 24. The White Stripes  (Q268160)
+ 25. Blur  (Q485820)
+ 26. The Smashing Pumpkins  (Q184217)
+ 27. Imagine Dragons  (Q391348)
+ 28. Twenty One Pilots  (Q7857806)   also in: reggae
+ 29. Franz Ferdinand  (Q173180)
+ 30. The Smiths  (Q180598)
+ 31. The Offspring  (Q157041)
+ 32. HIM  (Q23479)
+ 33. Sonic Youth  (Q188626)
+ 34. Gorillaz  (Q189991)   also in: hip-hop, electronic
+ 35. The Rasmus  (Q485679)
+ 36. Florence + the Machine  (Q217360)
+ 37. Placebo  (Q484839)
+ 38. Snow Patrol  (Q188407)
+ 39. Garbage  (Q485673)
+ 40. Keane  (Q484311)
+ 41. Fall Out Boy  (Q485811)
+ 42. a-ha  (Q156305)
+ 43. Three Days Grace  (Q486825)
+ 44. Panic! at the Disco  (Q277551)
+ 45. Pixies  (Q188464)
+ 46. Arcade Fire  (Q58608)
+ 47. Kings of Leon  (Q192486)
+ 48. Faith No More  (Q320499)
+ 49. Papa Roach  (Q254371)
+ 50. Good Charlotte  (Q485220)
+
+   -- reserves (next in line if something above is cut) --
+  R 1. INXS  (Q489801)
+  R 2. Queens of the Stone Age  (Q1243718)
+  R 3. Audioslave  (Q486830)
+  R 4. Hoobastank  (Q49724)
+  R 5. Portishead  (Q191352)
+  R 6. Jamiroquai  (Q202041)
+  R 7. The Cardigans  (Q106379)
+  R 8. The Bangles  (Q214418)
+  R 9. Travis  (Q160103)
+  R10. Bloc Party  (Q205838)
+
+==============================================================================
+💫 K-POP  —  50 acts · 50 bands · 0 solo
+==============================================================================
+  1. BTS  (Q13580495)
+  2. Blackpink  (Q25056945)   also in: hip-hop, electronic
+  3. Twice  (Q20645861)   also in: pop
+  4. Girls' Generation  (Q20153)
+  5. EXO  (Q494717)
+  6. Kara  (Q124459)
+  7. Wanna One  (Q30311578)
+  8. BigBang  (Q282104)
+  9. Red Velvet  (Q17466114)
+ 10. Stray Kids  (Q46134670)   also in: rock, hip-hop, electronic, rnb-soul
+ 11. Super Junior  (Q239693)
+ 12. Itzy  (Q60732823)   also in: hip-hop, electronic
+ 13. 2NE1  (Q171885)
+ 14. SHINee  (Q269836)
+ 15. Got7  (Q23772001)   also in: hip-hop
+ 16. Seventeen  (Q14524548)   also in: pop, hip-hop, rnb-soul
+ 17. NCT  (Q23725822)   also in: hip-hop
+ 18. Enhypen  (Q99479445)
+ 19. TVXQ  (Q192983)   also in: pop, rnb-soul
+ 20. NewJeans  (Q113189277)
+ 21. I-dle  (Q51885404)
+ 22. Wonder Girls  (Q476119)   also in: hip-hop
+ 23. Tomorrow X Together  (Q60550265)
+ 24. Monsta X  (Q19855151)
+ 25. Ateez  (Q59793088)   also in: hip-hop
+ 26. I.O.I  (Q23688122)
+ 27. Loona  (Q28025953)   also in: electronic
+ 28. T-ara  (Q495383)
+ 29. EXID  (Q492381)
+ 30. iKon  (Q18161349)
+ 31. GFriend  (Q18733030)
+ 32. Babymonster  (Q115967938)
+ 33. AOA  (Q492035)
+ 34. Highlight  (Q269595)
+ 35. 4Minute  (Q39682)
+ 36. SISTAR  (Q223048)
+ 37. Apink  (Q483286)
+ 38. Winner  (Q15116397)
+ 39. Ive  (Q109375061)
+ 40. 2PM  (Q222760)
+ 41. BtoB  (Q491067)
+ 42. Nmixx  (Q109307762)
+ 43. B.A.P  (Q483234)
+ 44. Day6  (Q20898046)
+ 45. Momoland  (Q27820706)
+ 46. Iz*One  (Q56402353)
+ 47. Miss A  (Q284740)
+ 48. INFINITE  (Q50598)   also in: pop
+ 49. SS501  (Q489849)
+ 50. KAJ  (Q28153804)   also in: pop, rock, hip-hop, latin
+
+   -- reserves (next in line if something above is cut) --
+  R 1. Everglow  (Q62067345)
+  R 2. NU'EST  (Q225105)
+  R 3. CNBLUE  (Q483172)
+  R 4. Kep1er  (Q109077000)
+  R 5. Girl's Day  (Q497325)
+  R 6. Dreamcatcher  (Q20684822)
+  R 7. Oh My Girl  (Q19794854)
+  R 8. WJSN  (Q21964258)
+  R 9. f(x)  (Q344286)
+  R10. MBLAQ  (Q499183)
+
+==============================================================================
+TOTAL: 522 band slots + 78 solo-legend slots = 600
+4 slot(s) had their genre set by hand.
+416 acts qualified for more than one genre; each was placed by rule.
+==============================================================================
+
