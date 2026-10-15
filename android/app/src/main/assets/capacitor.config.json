@@ -1,0 +1,9 @@
+{
+	"appId": "com.bandpick.app",
+	"appName": "BandPick",
+	"webDir": "www",
+	"backgroundColor": "#0a0710",
+	"android": {
+		"allowMixedContent": false
+	}
+}
