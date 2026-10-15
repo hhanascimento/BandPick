@@ -1,0 +1,445 @@
+.results {
+  gap: 18px;
+}
+
+/*
+ * The champion takes the full width and everything it beat sits underneath, at
+ * every screen size: the result of the game is the champion, and a side-by-side
+ * layout put the runner-up at the same weight as the winner.
+ */
+.results__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* ---- Champion ---- */
+.champion {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 24px 20px 22px;
+  border-radius: var(--app-radius-lg);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.14), rgba(139, 92, 246, 0.12));
+  box-shadow: var(--app-shadow);
+  animation: crown 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes crown {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.champion__glow {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.4), rgba(251, 191, 36, 0) 70%);
+  pointer-events: none;
+}
+
+.champion__badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--app-amber);
+  color: #2b1e00;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.champion__badge ion-icon {
+  font-size: 0.95rem;
+}
+
+.champion__avatar {
+  position: relative;
+  width: 100%;
+  max-width: 168px;
+  margin: 6px 0 4px;
+  --avatar-radius: 20px;
+}
+
+.champion__name {
+  position: relative;
+  margin: 0;
+  font-size: clamp(1.5rem, 6.5vw, 2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.champion__meta {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---- Defeated ---- */
+.defeated {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/*
+ * Two columns at every width, including a phone: the list is long (up to 20
+ * artists) and pairing them up keeps it readable without endless scrolling.
+ * `minmax(0, 1fr)` stops a long name from stretching its column.
+ */
+.defeated__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.defeated__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.defeated__avatar {
+  flex: 0 0 auto;
+  width: 38px;
+  --avatar-radius: 10px;
+}
+
+.defeated__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.defeated__name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.defeated__round {
+  font-size: 0.68rem;
+}
+
+/* ---- Share ---- */
+.share {
+  gap: 14px;
+}
+
+.share__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.share__preview {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--app-border);
+  box-shadow: var(--app-shadow);
+}
+
+.share__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+  gap: 8px;
+}
+
+.share__dest {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 6px;
+  border-radius: 14px;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  color: #f5f3ff;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.share__dest:active {
+  transform: scale(0.96);
+}
+
+.share__dest ion-icon {
+  font-size: 1.45rem;
+}
+
+/* Brand accents, kept subtle so the dark theme stays consistent. */
+.share__dest--ig ion-icon {
+  color: #e1306c;
+}
+
+.share__dest--fb ion-icon {
+  color: #1877f2;
+}
+
+.share__dest--x ion-icon {
+  color: #ffffff;
+}
+
+.share__dest--wa ion-icon {
+  color: #25d366;
+}
+
+.share__dest--tg ion-icon {
+  color: #29a9eb;
+}
+
+.share__extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+}
+
+.share__extra {
+  --color: var(--app-muted);
+  --padding-start: 10px;
+  --padding-end: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+}
+
+.share__extra ion-icon {
+  font-size: 1rem;
+}
+
+/* ---- Bracket (knockout games) ---- */
+/*
+ * Drawn as the tree it is, like the share card — same geometry, same shape.
+ *
+ * The two variables are the whole trick. `--bracket-label` fixes the height of
+ * every stage heading, so all the duel areas start at the same y and end at the
+ * same y; `--bracket-gap` is the slot the connectors live in.
+ */
+.bracket {
+  gap: 14px;
+  --bracket-label: 18px;
+  --bracket-gap: 24px;
+}
+
+.bracket__board {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+}
+
+.bracket__column {
+  flex: 1 1 0;
+  min-width: 128px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bracket__stage {
+  height: var(--bracket-label);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*
+ * `space-around` with no extra gap is what aligns the tree. With the free space
+ * shared evenly, duel i of a column sits at (i + 0.5) of the column's height —
+ * the same value the share card computes — so a column with half as many duels
+ * lands exactly halfway between each pair above it.
+ */
+.bracket__duels {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bracket__duel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 7px 9px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Tick out of the box, reaching the connector's bar in the slot beside it. */
+.bracket__duel::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: calc(var(--bracket-gap) / -2);
+  width: calc(var(--bracket-gap) / 2);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/*
+ * The final duel, highlighted the way the share card highlights it. This is the
+ * only place the champion is called out: the final already names them, so a
+ * separate champion column would repeat it and cost a whole column's width.
+ */
+.bracket__duel--crown {
+  border-color: rgba(251, 191, 36, 0.5);
+  background: rgba(251, 191, 36, 0.14);
+}
+
+/* Nothing follows the final, so it gets no tick. */
+.bracket__duel--crown::after {
+  content: none;
+}
+
+.bracket__winner {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bracket__loser {
+  font-size: 0.74rem;
+  line-height: 1.25;
+  color: rgba(245, 243, 255, 0.5);
+  text-decoration: line-through;
+  text-decoration-color: rgba(244, 63, 94, 0.55);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- Connectors ---- */
+.bracket__gap {
+  flex: 0 0 var(--bracket-gap);
+  width: var(--bracket-gap);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Matches the heading above it, so the body lines up with the duel area. */
+.bracket__gap-spacer {
+  flex: 0 0 auto;
+  height: var(--bracket-label);
+}
+
+.bracket__gap-body {
+  position: relative;
+  flex: 1;
+}
+
+.bracket__line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* The bar joining a pair of duels to the one they feed. */
+.bracket__line--bar {
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+/* The run from that bar into the next duel. */
+.bracket__line--arm {
+  left: 50%;
+  right: 0;
+  height: 2px;
+  transform: translateY(-1px);
+}
+
+/* ---- Spotify ---- */
+.listen {
+  gap: 12px;
+}
+
+.listen__mark {
+  font-size: 1.7rem;
+  color: #1db954;
+}
+
+.listen__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.listen__embed {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  background: #000;
+}
+
+/* Spotify's own green, with dark ink for contrast on the bright fill. */
+.cta--spotify {
+  --background: #1db954;
+  --background-hover: #1ed760;
+  --background-activated: #18a349;
+  --color: #06240f;
+  --box-shadow: none;
+  font-size: 0.98rem;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+}

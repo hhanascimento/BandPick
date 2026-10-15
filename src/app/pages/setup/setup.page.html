@@ -1,0 +1,153 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>New game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-page">
+    <!-- Format ---------------------------------------------------------- -->
+    <section class="panel stack">
+      <h2 class="section-title">How do you want to play?</h2>
+
+      <div class="format-grid">
+        @for (option of formats; track option.id) {
+          <button
+            type="button"
+            class="format-card"
+            [class.format-card--active]="format() === option.id"
+            [attr.aria-pressed]="format() === option.id"
+            (click)="pickFormat(option.id)"
+          >
+            <span class="format-card__title">
+              {{ option.title }}
+              @if (format() === option.id) {
+                <ion-icon class="format-card__check" [icon]="icons.checkmark"></ion-icon>
+              }
+            </span>
+            <span class="format-card__blurb muted">{{ option.blurb }}</span>
+          </button>
+        }
+      </div>
+    </section>
+
+    @if (isBracket()) {
+      <!-- Bracket size -------------------------------------------------- -->
+      <section class="panel stack">
+        <div class="row row--between">
+          <h2 class="section-title">How big is the bracket?</h2>
+          <span class="rounds-value">{{ bracketSize() }}</span>
+        </div>
+
+        <div class="row row--between quick-picks">
+          @for (size of bracketSizes; track size) {
+            <button
+              type="button"
+              class="quick-pick"
+              [class.quick-pick--active]="bracketSize() === size"
+              (click)="pickBracketSize(size)"
+            >
+              Last {{ size }}
+            </button>
+          }
+        </div>
+
+        <p class="muted helper">
+          Single elimination: {{ bracketSize() }} bands in, {{ bracketDuels() }} duels to the
+          crown. Win and you go through — lose once and you are out.
+        </p>
+      </section>
+    } @else {
+      <!-- Rounds -------------------------------------------------------- -->
+      <section class="panel stack">
+        <div class="row row--between">
+          <h2 class="section-title">How many rounds?</h2>
+          <span class="rounds-value">{{ rounds() }}</span>
+        </div>
+
+        <ion-range
+          aria-label="Number of rounds"
+          [min]="minRounds"
+          [max]="maxRounds"
+          [step]="1"
+          [value]="rounds()"
+          [pin]="true"
+          [pinFormatter]="roundsPin"
+          [ticks]="true"
+          [snaps]="true"
+          (ionChange)="onRoundsChange($any($event))"
+        ></ion-range>
+
+        <div class="row row--between quick-picks">
+          @for (preset of quickPicks; track preset) {
+            <button
+              type="button"
+              class="quick-pick"
+              [class.quick-pick--active]="rounds() === preset"
+              (click)="pickRounds(preset)"
+            >
+              {{ preset }}
+            </button>
+          }
+        </div>
+
+        <p class="muted helper">
+          From {{ minRounds }} to {{ maxRounds }} rounds. {{ artistCount() }} bands will take the
+          stage.
+        </p>
+      </section>
+    }
+
+    <!-- Genre ----------------------------------------------------------- -->
+    <section class="stack">
+      <div class="row row--between">
+        <h2 class="section-title">Pick a music style</h2>
+        <ion-icon class="section-icon" [icon]="icons.musicalNotes"></ion-icon>
+      </div>
+
+      <ul class="genre-grid">
+        @for (genre of genres; track genre.id) {
+          <li>
+            <button
+              type="button"
+              class="genre-card"
+              [class.genre-card--active]="selectedGenreId() === genre.id"
+              [attr.aria-pressed]="selectedGenreId() === genre.id"
+              (click)="selectGenre(genre.id)"
+            >
+              <span class="genre-card__emoji" aria-hidden="true">{{ genre.emoji }}</span>
+              <span class="genre-card__name">{{ genre.name }}</span>
+              <span class="genre-card__blurb muted">{{ genre.blurb }}</span>
+              @if (selectedGenreId() === genre.id) {
+                <ion-icon class="genre-card__check" [icon]="icons.checkmark"></ion-icon>
+              }
+            </button>
+          </li>
+        }
+      </ul>
+    </section>
+
+    @if (error(); as message) {
+      <p class="error" role="alert">{{ message }}</p>
+    }
+  </div>
+</ion-content>
+
+<ion-footer class="setup-footer">
+  <div class="setup-footer__inner">
+    <ion-button expand="block" class="cta" [disabled]="!canStart()" (click)="start()">
+      <ion-icon slot="start" [icon]="icons.play"></ion-icon>
+      Start
+    </ion-button>
+    @if (selectedGenre(); as genre) {
+      <p class="setup-footer__summary muted">
+        {{ genre.name }} · {{ summaryLabel() }} · winner takes the crown
+      </p>
+    } @else {
+      <p class="setup-footer__summary muted">Choose a music style to continue</p>
+    }
+  </div>
+</ion-footer>

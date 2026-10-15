@@ -1,0 +1,198 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally.
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/*
+ * The game is designed dark-only (stage lights, neon gradients), so we pin the
+ * dark palette instead of following the system setting.
+ */
+@import "@ionic/angular/css/palettes/dark.always.css";
+
+/* --------------------------------------------------------------------------
+   App shell
+   -------------------------------------------------------------------------- */
+
+ion-content {
+  --background: radial-gradient(120% 80% at 50% -10%, #241546 0%, #0a0710 62%) fixed;
+}
+
+ion-toolbar {
+  --background: transparent;
+  --border-width: 0;
+  --min-height: 56px;
+}
+
+ion-title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+ion-back-button {
+  --color: var(--app-muted);
+}
+
+html,
+body {
+  background: #0a0710;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent the whole page bouncing while the player taps tiles. */
+ion-content::part(scroll) {
+  overscroll-behavior: contain;
+}
+
+/* --------------------------------------------------------------------------
+   Shared building blocks
+   -------------------------------------------------------------------------- */
+
+.app-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 4px 18px calc(28px + var(--ion-safe-area-bottom, 0px));
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.panel {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius);
+  padding: 16px 18px;
+}
+
+.panel--tight {
+  padding: 12px 14px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stack--sm {
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row--between {
+  justify-content: space-between;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--app-muted);
+}
+
+.muted {
+  color: var(--app-muted);
+}
+
+.gradient-text {
+  background: var(--app-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Primary call-to-action: a chunky gradient pill. */
+.cta {
+  --background: var(--app-gradient-brand);
+  --background-hover: var(--app-gradient-brand);
+  --background-activated: var(--app-gradient-brand);
+  --border-radius: 999px;
+  --color: #fff;
+  --box-shadow: var(--app-shadow);
+  --padding-top: 18px;
+  --padding-bottom: 18px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  margin: 0;
+}
+
+.cta--ghost {
+  --background: var(--app-surface-strong);
+  --background-hover: var(--app-surface-strong);
+  --background-activated: var(--app-surface-strong);
+  --box-shadow: none;
+  --color: #f5f3ff;
+  border: 1px solid var(--app-border);
+}
+
+.cta--soft {
+  --background: transparent;
+  --background-hover: var(--app-surface);
+  --background-activated: var(--app-surface);
+  --box-shadow: none;
+  --color: var(--app-muted);
+  font-weight: 600;
+}
+
+/* Reusable "pill" tag, e.g. genre badges. */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--app-surface-strong);
+  border: 1px solid var(--app-border);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f5f3ff;
+}
+
+/* Respect users who ask for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

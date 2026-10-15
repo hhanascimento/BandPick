@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/setup" text="Setup"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ genre()?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-page battle">
+    <section class="progress">
+      <div class="row row--between">
+        <span class="eyebrow">{{ roundLabel() }}</span>
+        <span class="eyebrow">{{ phaseLabel() }}</span>
+      </div>
+      <ion-progress-bar [value]="progress()"></ion-progress-bar>
+    </section>
+
+    <p class="battle__prompt">Which one do you prefer?</p>
+
+    @if (pairing(); as pair) {
+      <div class="board">
+        <button #tile type="button" class="tile" (click)="choose('left')">
+          <div class="tile__avatar">
+            <app-artist-avatar [artist]="pair.left" />
+          </div>
+          <div class="tile__meta">
+            <span class="tile__name">{{ pair.left.name }}</span>
+            <span class="tile__hint muted">Tap to pick</span>
+          </div>
+        </button>
+
+        <div class="board__or" aria-hidden="true">
+          <span>or</span>
+        </div>
+
+        <button #tile type="button" class="tile" (click)="choose('right')">
+          <div class="tile__avatar">
+            <app-artist-avatar [artist]="pair.right" />
+          </div>
+          <div class="tile__meta">
+            <span class="tile__name">{{ pair.right.name }}</span>
+            <span class="tile__hint muted">Tap to pick</span>
+          </div>
+        </button>
+      </div>
+    }
+
+    <p class="battle__footnote muted">{{ footnote() }}</p>
+  </div>
+</ion-content>

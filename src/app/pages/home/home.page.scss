@@ -1,0 +1,106 @@
+.home {
+  justify-content: center;
+  gap: 26px;
+  text-align: center;
+}
+
+.home__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---- Animated vinyl record ---- */
+.vinyl {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  background: repeating-radial-gradient(
+    circle at center,
+    #1b1425 0 3px,
+    #251b33 3px 6px
+  );
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 44px -22px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(139, 92, 246, 0.18);
+  display: grid;
+  place-items: center;
+  animation: spin 9s linear infinite;
+}
+
+.vinyl__grooves {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0) 22%,
+    rgba(255, 255, 255, 0.12) 48%,
+    rgba(255, 255, 255, 0) 72%,
+    rgba(255, 255, 255, 0.12)
+  );
+  opacity: 0.5;
+}
+
+.vinyl__label {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--app-gradient-brand);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  color: #fff;
+  box-shadow: inset 0 0 0 4px #0a0710;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Copy ---- */
+.home__title {
+  margin: 0;
+  font-size: clamp(2.4rem, 13vw, 3.4rem);
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -0.035em;
+}
+
+.home__tagline {
+  margin: 0;
+  max-width: 34ch;
+  color: var(--app-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* ---- Actions ---- */
+.home__actions {
+  width: 100%;
+}
+
+.home__facts {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.home__facts ion-icon {
+  font-size: 0.95rem;
+  color: var(--app-amber);
+}
+
+.home__note {
+  margin: -8px 0 0;
+  font-size: 0.82rem;
+}

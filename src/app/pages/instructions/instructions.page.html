@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>How to play</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-page">
+    <section class="panel stack">
+      <h2 class="section-title">The game in four steps</h2>
+
+      <ol class="steps">
+        @for (step of steps; track step.title; let i = $index) {
+          <li class="step">
+            <span class="step__number">{{ i + 1 }}</span>
+            <div class="step__body">
+              <p class="step__title">{{ step.title }}</p>
+              <p class="step__text muted">{{ step.text }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+    </section>
+
+    <section class="panel stack--sm stack">
+      <h2 class="section-title">Two ways to play</h2>
+      <ul class="genre-list genre-list--formats">
+        @for (format of formats; track format.title) {
+          <li class="genre genre--stack">
+            <span class="genre__emoji" aria-hidden="true">🏟️</span>
+            <span class="genre__name">{{ format.title }}</span>
+            <span class="genre__count muted">{{ format.text }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="panel stack--sm stack">
+      <h2 class="section-title">House rules</h2>
+      <ul class="rules">
+        @for (rule of rules; track rule; let i = $index) {
+          <li class="rule">
+            <ion-icon [icon]="ruleIcons[i]"></ion-icon>
+            <span>{{ rule }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+
+    <section class="panel stack--sm stack">
+      <h2 class="section-title">Artwork</h2>
+      <p class="body-text muted">
+        Each band is shown with a photo when one is available. When it isn't, we generate
+        artwork from the band's name — so a tile is never blank and the game works fully
+        offline.
+      </p>
+      <p class="body-text muted">
+        Photos come from Wikimedia Commons and are credited in
+        <a routerLink="/credits">Photo credits</a>.
+      </p>
+    </section>
+
+    <section class="panel stack">
+      <h2 class="section-title">Pick your lane</h2>
+      <p class="body-text muted">
+        {{ genres.length }} styles are on the menu. Every one has enough bands for a full
+        {{ maxRounds }}-round run, or a {{ maxBracketSize }}-band bracket.
+      </p>
+      <ul class="genre-list">
+        @for (genre of genres; track genre.id) {
+          <li class="genre">
+            <span class="genre__emoji" aria-hidden="true">{{ genre.emoji }}</span>
+            <span class="genre__name">{{ genre.name }}</span>
+            <span class="genre__count muted">{{ genre.artists.length }}</span>
+          </li>
+        }
+      </ul>
+    </section>
+  </div>
+</ion-content>

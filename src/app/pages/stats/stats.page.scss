@@ -1,0 +1,328 @@
+.stats {
+  gap: 18px;
+}
+
+/* ---- Empty state ---- */
+.stats--empty {
+  justify-content: center;
+}
+
+.empty {
+  text-align: center;
+  align-items: center;
+  padding: 34px 22px;
+}
+
+.empty__emoji {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.empty__hint {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* ---- Overview ---- */
+.overview__headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.overview__value {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  background: var(--app-gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.overview__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--app-muted);
+}
+
+/* The standard-vs-bracket share, as one two-tone bar. */
+.split {
+  display: flex;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.split__standard {
+  background: var(--app-gradient-brand);
+}
+
+.split__bracket {
+  background: var(--app-amber);
+}
+
+.overview__modes {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.overview__modes ion-icon {
+  font-size: 0.95rem;
+  color: var(--app-cyan);
+}
+
+/* ---- Podium ----
+ *
+ * Three columns; first place sits in the middle on a taller block, the way a
+ * medal ceremony does. On narrow phones it collapses to a simple 1-2-3 list.
+ */
+.podium {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 8px;
+}
+
+.podium__slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  padding: 12px 6px 14px;
+  border-radius: var(--app-radius);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* The winner takes the middle column and the tallest block. */
+.podium__slot--first {
+  grid-column: 2;
+  grid-row: 1;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  border-color: rgba(251, 191, 36, 0.45);
+  background: linear-gradient(180deg, rgba(251, 191, 36, 0.14), rgba(139, 92, 246, 0.1));
+  box-shadow: var(--app-shadow);
+}
+
+.podium__slot:nth-child(2) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.podium__slot:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.podium__medal {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.podium__avatar {
+  width: 100%;
+  max-width: 74px;
+  --avatar-radius: 50%;
+}
+
+.podium__slot--first .podium__avatar {
+  max-width: 96px;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.65);
+}
+
+.podium__name {
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.podium__wins {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--app-amber);
+}
+
+/* ---- The record ---- */
+.record {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.record__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  text-align: center;
+  padding: 13px 8px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.record__item ion-icon {
+  font-size: 1.2rem;
+  color: var(--app-pink);
+}
+
+.record__value {
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Genre names and dates do not fit the big-number treatment. */
+.record__value--text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.record__label {
+  font-size: 0.68rem;
+}
+
+/* ---- Share (mirrors the results screen) ---- */
+.share {
+  gap: 14px;
+}
+
+.share__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.share__preview {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid var(--app-border);
+  box-shadow: var(--app-shadow);
+}
+
+.share__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(86px, 1fr));
+  gap: 8px;
+}
+
+.share__dest {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 6px;
+  border-radius: 14px;
+  border: 1px solid var(--app-border);
+  background: var(--app-surface);
+  color: #f5f3ff;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.share__dest:active {
+  transform: scale(0.96);
+}
+
+.share__dest ion-icon {
+  font-size: 1.45rem;
+}
+
+.share__dest--ig ion-icon {
+  color: #e1306c;
+}
+
+.share__dest--fb ion-icon {
+  color: #1877f2;
+}
+
+.share__dest--x ion-icon {
+  color: #ffffff;
+}
+
+.share__dest--wa ion-icon {
+  color: #25d366;
+}
+
+.share__dest--tg ion-icon {
+  color: #29a9eb;
+}
+
+.share__extras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 10px;
+}
+
+.share__extra {
+  --color: var(--app-muted);
+  --padding-start: 10px;
+  --padding-end: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+}
+
+.share__extra ion-icon {
+  font-size: 1rem;
+}
+
+/* ---- Narrow phones: the podium becomes an ordinary ranked list ---- */
+@media (max-width: 380px) {
+  .podium {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .podium__slot,
+  .podium__slot--first,
+  .podium__slot:nth-child(2),
+  .podium__slot:nth-child(3) {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

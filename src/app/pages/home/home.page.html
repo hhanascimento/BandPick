@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+  <div class="app-page home">
+    <header class="home__hero">
+      <div class="vinyl" aria-hidden="true">
+        <div class="vinyl__grooves"></div>
+        <div class="vinyl__label">♪</div>
+      </div>
+
+      <h1 class="home__title">
+        Band<span class="gradient-text">Pick</span>
+      </h1>
+      <p class="home__tagline">
+        Two bands go head to head. Tap the one you prefer — your pick stays on stage
+        and a new challenger steps up.
+      </p>
+    </header>
+
+    <div class="stack home__actions">
+      <ion-button expand="block" class="cta" (click)="play()">
+        <ion-icon slot="start" [icon]="playIcon"></ion-icon>
+        Play
+      </ion-button>
+
+      <ion-button expand="block" class="cta cta--ghost" (click)="openStats()">
+        <ion-icon slot="start" [icon]="statsIcon"></ion-icon>
+        Stats
+      </ion-button>
+
+      <ion-button expand="block" class="cta cta--ghost" (click)="openInstructions()">
+        <ion-icon slot="start" [icon]="infoIcon"></ion-icon>
+        Instructions
+      </ion-button>
+    </div>
+
+    <ul class="home__facts">
+      <li class="pill">
+        <ion-icon [icon]="sparkleIcon"></ion-icon>
+        12 genres
+      </li>
+      <li class="pill">
+        <ion-icon [icon]="trophyIcon"></ion-icon>
+        Up to {{ maxRounds }} rounds
+      </li>
+      <li class="pill">
+        <ion-icon [icon]="bracketIcon"></ion-icon>
+        Or last {{ maxBracketSize }} bracket
+      </li>
+    </ul>
+
+    <p class="home__note muted">No scores, no timers. Just your taste.</p>
+  </div>
+</ion-content>

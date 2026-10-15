@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Photo credits</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-page">
+    <section class="panel stack--sm stack">
+      <p class="eyebrow">
+        <ion-icon [icon]="icons.camera"></ion-icon>
+        {{ photoCount }} photos
+      </p>
+      <p class="body-text">
+        Artist photos come from <strong>Wikimedia Commons</strong> and are used under the licence
+        shown with each one — mostly Creative Commons Attribution (CC BY) or
+        Attribution-ShareAlike (CC BY-SA), plus some public domain images.
+      </p>
+      <p class="body-text muted">
+        Each photo is credited to its photographer below, and every copy bundled with the app has
+        been <strong>cropped and resized</strong> for the game tiles. Tap a licence to read its
+        terms, or the source link to see the original file.
+      </p>
+    </section>
+
+    <ion-searchbar
+      [debounce]="120"
+      placeholder="Search artist or photographer"
+      (ionInput)="onSearch($any($event))"
+    ></ion-searchbar>
+
+    @if (visible().length === 0) {
+      <p class="body-text muted empty">No credits match that search.</p>
+    } @else {
+      <ul class="credits">
+        @for (credit of visible(); track credit.artistId) {
+          <li class="credit">
+            <p class="credit__artist">{{ credit.artistName }}</p>
+            <p class="credit__line">
+              {{ credit.title }} — {{ credit.author }}
+            </p>
+            <p class="credit__links">
+              @if (credit.licenceUrl) {
+                <a [href]="credit.licenceUrl" target="_blank" rel="noopener noreferrer">
+                  {{ credit.licence || 'Licence' }}
+                  <ion-icon [icon]="icons.external"></ion-icon>
+                </a>
+              } @else {
+                <span>{{ credit.licence || 'See source' }}</span>
+              }
+              <a [href]="credit.sourceUrl" target="_blank" rel="noopener noreferrer">
+                Source
+                <ion-icon [icon]="icons.external"></ion-icon>
+              </a>
+            </p>
+          </li>
+        }
+      </ul>
+
+      @if (remaining() > 0) {
+        <button type="button" class="more" (click)="showMore()">
+          Show {{ remaining() }} more
+        </button>
+      }
+    }
+  </div>
+</ion-content>

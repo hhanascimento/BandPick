@@ -1,0 +1,63 @@
+// "BandPick" theme
+// ---------------------------------------------------------------------------
+// Loaded after global.scss (see angular.json "styles"), so these values win over
+// Ionic's default dark palette.
+
+:root {
+  --app-violet: #8b5cf6;
+  --app-pink: #ec4899;
+  --app-cyan: #22d3ee;
+  --app-amber: #fbbf24;
+
+  --app-surface: rgba(255, 255, 255, 0.06);
+  --app-surface-strong: rgba(255, 255, 255, 0.1);
+  --app-border: rgba(255, 255, 255, 0.12);
+  --app-muted: rgba(245, 243, 255, 0.62);
+
+  --app-gradient-brand: linear-gradient(135deg, var(--app-violet) 0%, var(--app-pink) 100%);
+  --app-gradient-warm: linear-gradient(135deg, var(--app-amber) 0%, var(--app-pink) 100%);
+
+  --app-radius: 18px;
+  --app-radius-lg: 26px;
+  --app-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.85);
+
+  // ---- Ionic palette -----------------------------------------------------
+  --ion-color-primary: #8b5cf6;
+  --ion-color-primary-rgb: 139, 92, 246;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #7a51d8;
+  --ion-color-primary-tint: #976af7;
+
+  --ion-color-secondary: #ec4899;
+  --ion-color-secondary-rgb: 236, 72, 153;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #cf3f87;
+  --ion-color-secondary-tint: #ee5aa3;
+
+  --ion-color-tertiary: #22d3ee;
+  --ion-color-tertiary-rgb: 34, 211, 238;
+  --ion-color-tertiary-contrast: #04222a;
+  --ion-color-tertiary-contrast-rgb: 4, 34, 42;
+  --ion-color-tertiary-shade: #1ebad1;
+  --ion-color-tertiary-tint: #38d7f0;
+
+  --ion-color-warning: #fbbf24;
+  --ion-color-warning-rgb: 251, 191, 36;
+  --ion-color-warning-contrast: #2b1e00;
+  --ion-color-warning-contrast-rgb: 43, 30, 0;
+  --ion-color-warning-shade: #dda820;
+  --ion-color-warning-tint: #fbc53a;
+
+  // ---- Dark surfaces -----------------------------------------------------
+  --ion-background-color: #0a0710;
+  --ion-background-color-rgb: 10, 7, 16;
+  --ion-text-color: #f5f3ff;
+  --ion-text-color-rgb: 245, 243, 255;
+
+  --ion-toolbar-background: transparent;
+  --ion-toolbar-color: #f5f3ff;
+  --ion-item-background: transparent;
+  --ion-card-background: rgba(255, 255, 255, 0.05);
+}

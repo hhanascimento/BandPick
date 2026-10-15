@@ -1,0 +1,182 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Stats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="app-page stats" [class.stats--empty]="!hasGames()">
+    @if (!hasGames()) {
+      <!-- Nothing to show yet -------------------------------------------- -->
+      <section class="panel stack empty">
+        <span class="empty__emoji" aria-hidden="true">🎧</span>
+        <h2 class="section-title">No games played yet</h2>
+        <p class="muted empty__hint">
+          Crown a champion and this screen fills up: games played, your favourite lane, and a
+          podium for the bands you crown most.
+        </p>
+        <ion-button expand="block" class="cta" (click)="playNow()">
+          <ion-icon slot="start" [icon]="icons.play"></ion-icon>
+          Play now
+        </ion-button>
+      </section>
+    } @else {
+      <!-- Overview --------------------------------------------------------- -->
+      <section class="panel stack overview">
+        <div class="overview__headline">
+          <span class="overview__value">{{ summary().gamesPlayed }}</span>
+          <span class="overview__label">Games played</span>
+        </div>
+
+        <div
+          class="split"
+          role="img"
+          [attr.aria-label]="splitLabel()"
+        >
+          <span class="split__standard" [style.width.%]="split().standard"></span>
+          <span class="split__bracket" [style.width.%]="split().bracket"></span>
+        </div>
+
+        <ul class="overview__modes">
+          <li class="pill">
+            <ion-icon [icon]="icons.duels"></ion-icon>
+            {{ summary().standardGames }} standard
+          </li>
+          <li class="pill">
+            <ion-icon [icon]="icons.bracket"></ion-icon>
+            {{ summary().bracketGames }} bracket
+          </li>
+        </ul>
+      </section>
+
+      <!-- Podium ----------------------------------------------------------- -->
+      <section class="panel stack">
+        <div class="row row--between">
+          <h2 class="section-title">Most crowned</h2>
+          <span class="pill">{{ summary().crowned }} bands</span>
+        </div>
+
+        <ol class="podium">
+          @for (entry of summary().podium; track entry.artist.id; let i = $index) {
+            <li class="podium__slot" [class.podium__slot--first]="i === 0">
+              <span class="podium__medal" aria-hidden="true">{{ medals[i] }}</span>
+              <div class="podium__avatar">
+                <app-artist-avatar [artist]="entry.artist" />
+              </div>
+              <span class="podium__name">{{ entry.artist.name }}</span>
+              <span class="podium__wins">
+                {{ entry.wins }} {{ entry.wins === 1 ? 'crown' : 'crowns' }}
+              </span>
+            </li>
+          }
+        </ol>
+      </section>
+
+      <!-- The record ------------------------------------------------------- -->
+      <section class="panel stack">
+        <h2 class="section-title">The record</h2>
+
+        <ul class="record">
+          <li class="record__item">
+            <ion-icon [icon]="icons.duels"></ion-icon>
+            <span class="record__value">{{ summary().duelsPlayed }}</span>
+            <span class="record__label muted">Duels played</span>
+          </li>
+          <li class="record__item">
+            <ion-icon [icon]="icons.crown"></ion-icon>
+            <span class="record__value">{{ summary().crowned }}</span>
+            <span class="record__label muted">Bands crowned</span>
+          </li>
+          @if (summary().longestStreak > 0) {
+            <li class="record__item">
+              <ion-icon [icon]="icons.streak"></ion-icon>
+              <span class="record__value">{{ summary().longestStreak }}</span>
+              <span class="record__label muted">Longest streak</span>
+            </li>
+          }
+          @if (summary().biggestBracket > 0) {
+            <li class="record__item">
+              <ion-icon [icon]="icons.bracket"></ion-icon>
+              <span class="record__value">{{ summary().biggestBracket }}</span>
+              <span class="record__label muted">Biggest bracket</span>
+            </li>
+          }
+          @if (summary().favouriteGenre; as genre) {
+            <li class="record__item">
+              <ion-icon [icon]="icons.genre"></ion-icon>
+              <span class="record__value record__value--text">{{ genre.genreName }}</span>
+              <span class="record__label muted">Favourite lane · {{ genre.games }} games</span>
+            </li>
+          }
+          @if (sinceLabel(); as since) {
+            <li class="record__item">
+              <ion-icon [icon]="icons.since"></ion-icon>
+              <span class="record__value record__value--text">{{ since }}</span>
+              <span class="record__label muted">Playing since</span>
+            </li>
+          }
+        </ul>
+      </section>
+
+      <!-- Share ------------------------------------------------------------- -->
+      <section class="panel stack share">
+        <div class="stack stack--sm">
+          <h2 class="section-title">Share your stats</h2>
+          <p class="muted share__hint">
+            Send your stats card straight to Instagram, Facebook, WhatsApp and more.
+          </p>
+        </div>
+
+        @if (cardPreview(); as preview) {
+          <img class="share__preview" [src]="preview" alt="Stats card with your podium" />
+        }
+
+        <ion-button expand="block" class="cta" (click)="shareStats()">
+          <ion-icon slot="start" [icon]="icons.share"></ion-icon>
+          Share stats
+        </ion-button>
+
+        <ul class="share__grid">
+          @for (destination of destinations; track destination.id) {
+            <li>
+              <button
+                type="button"
+                [class]="'share__dest share__dest--' + destination.tone"
+                (click)="shareTo(destination.id)"
+              >
+                <ion-icon [icon]="destination.icon"></ion-icon>
+                <span>{{ destination.label }}</span>
+              </button>
+            </li>
+          }
+        </ul>
+
+        <div class="share__extras">
+          <ion-button fill="clear" class="share__extra" (click)="shareTextOnly()">
+            <ion-icon slot="start" [icon]="icons.text"></ion-icon>
+            Text only
+          </ion-button>
+          <ion-button fill="clear" class="share__extra" (click)="saveCard()">
+            <ion-icon slot="start" [icon]="icons.download"></ion-icon>
+            Save card
+          </ion-button>
+          <ion-button fill="clear" class="share__extra" (click)="copyText()">
+            <ion-icon slot="start" [icon]="icons.copy"></ion-icon>
+            Copy
+          </ion-button>
+        </div>
+      </section>
+    }
+  </div>
+</ion-content>
+
+<ion-toast
+  [isOpen]="toast().open"
+  [message]="toast().message"
+  duration="2400"
+  position="bottom"
+  (didDismiss)="closeToast()"
+></ion-toast>

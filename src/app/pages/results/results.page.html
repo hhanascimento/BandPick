@@ -1,0 +1,215 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="Home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>The verdict</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if (result(); as game) {
+    <div class="app-page results">
+      <!-- Champion first at full width, then what it beat below it -->
+      <div class="results__grid">
+        <section class="champion">
+          <div class="champion__glow" aria-hidden="true"></div>
+          <span class="champion__badge">
+            <ion-icon [icon]="icons.trophy"></ion-icon>
+            Champion
+          </span>
+          <div class="champion__avatar">
+            <app-artist-avatar [artist]="game.champion" />
+          </div>
+          <h1 class="champion__name">{{ game.champion.name }}</h1>
+          <p class="champion__meta muted">
+            {{ game.genre.emoji }} {{ game.genre.name }} · {{ formatSummary() }}
+          </p>
+        </section>
+
+        @if (bracket(); as board) {
+          <!-- Knockout play: the tree says more about the run than a flat list -->
+          <section class="panel stack bracket">
+            <div class="row row--between">
+              <h2 class="section-title">The bracket</h2>
+              <span class="pill">{{ board.size }} bands · {{ board.ties }} duels</span>
+            </div>
+
+            <div class="bracket__board">
+              @for (column of board.columns; track column.round; let i = $index) {
+                <div class="bracket__column">
+                  <span class="bracket__stage">{{ column.name }}</span>
+                  <ul class="bracket__duels">
+                    @for (duel of column.duels; track duel.loser.id) {
+                      <li
+                        class="bracket__duel"
+                        [class.bracket__duel--crown]="i === board.columns.length - 1"
+                      >
+                        <span class="bracket__winner">{{ duel.winner.name }}</span>
+                        <span class="bracket__loser">{{ duel.loser.name }}</span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+
+                <!-- The connectors, one slot per stage boundary -->
+                @if (i < board.columns.length - 1) {
+                  <div class="bracket__gap" aria-hidden="true">
+                    <span class="bracket__gap-spacer"></span>
+                    <div class="bracket__gap-body">
+                      @for (join of joinsByGap()[i]; track $index) {
+                        <span
+                          class="bracket__line bracket__line--bar"
+                          [style.top.%]="join.upper * 100"
+                          [style.height.%]="(join.lower - join.upper) * 100"
+                        ></span>
+                        <span
+                          class="bracket__line bracket__line--arm"
+                          [style.top.%]="join.target * 100"
+                        ></span>
+                      }
+                    </div>
+                  </div>
+                }
+              }
+            </div>
+          </section>
+        } @else {
+          <section class="panel defeated">
+            <div class="row row--between">
+              <h2 class="section-title">Defeated</h2>
+              <span class="pill">{{ game.eliminations.length }} bands</span>
+            </div>
+
+            <ul class="defeated__list">
+              @for (elimination of game.eliminations; track elimination.artist.id) {
+                <li class="defeated__item">
+                  <div class="defeated__avatar">
+                    <app-artist-avatar [artist]="elimination.artist" />
+                  </div>
+                  <div class="defeated__meta">
+                    <span class="defeated__name">{{ elimination.artist.name }}</span>
+                    <span class="defeated__round muted">{{ describeElimination(elimination) }}</span>
+                  </div>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+      </div>
+
+      <!-- Spotify: the champion, ready to play -->
+      @if (listen(); as spotify) {
+        <section class="panel stack listen">
+          <div class="row row--between">
+            <div class="stack stack--sm">
+              <span class="eyebrow">Spotify</span>
+              <h2 class="section-title">Listen to the band</h2>
+            </div>
+            <ion-icon class="listen__mark" [icon]="icons.spotify" aria-hidden="true"></ion-icon>
+          </div>
+
+          <p class="listen__hint muted">
+            @if (spotify.artistId) {
+              Hear {{ game.champion.name }} on Spotify — then play the game again with the tune
+              still going.
+            } @else {
+              No Spotify artist page for {{ game.champion.name }} in the catalogue yet, so this
+              searches Spotify for them instead.
+            }
+          </p>
+
+          @if (spotify.embedUrl) {
+            <!--
+              `allow` must stay a static attribute: Angular refuses to bind it on
+              an iframe (NG0910). The permissions are the ones Spotify asks for —
+              dropping `encrypted-media` limits the embed to short previews.
+            -->
+            <iframe
+              class="listen__embed"
+              [src]="spotify.embedUrl"
+              [height]="embedHeight"
+              [title]="'Spotify player for ' + game.champion.name"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              frameborder="0"
+            ></iframe>
+          }
+
+          <ion-button expand="block" class="cta cta--spotify" (click)="openSpotify()">
+            <ion-icon slot="start" [icon]="icons.spotify"></ion-icon>
+            {{ spotify.actionLabel }}
+          </ion-button>
+        </section>
+      }
+
+      <!-- Share -->
+      <section class="panel stack share">
+        <div class="stack--sm stack">
+          <h2 class="section-title">Share your champion</h2>
+          <p class="muted share__hint">
+            Send the result card straight to Instagram, Facebook, WhatsApp and more.
+          </p>
+        </div>
+
+        @if (cardPreview(); as preview) {
+          <img class="share__preview" [src]="preview" alt="Result card with your champion" />
+        }
+
+        <ion-button expand="block" class="cta" (click)="shareResult()">
+          <ion-icon slot="start" [icon]="icons.share"></ion-icon>
+          Share result
+        </ion-button>
+
+        <ul class="share__grid">
+          @for (destination of destinations; track destination.id) {
+            <li>
+              <button
+                type="button"
+                [class]="'share__dest share__dest--' + destination.tone"
+                (click)="shareTo(destination.id)"
+              >
+                <ion-icon [icon]="destination.icon"></ion-icon>
+                <span>{{ destination.label }}</span>
+              </button>
+            </li>
+          }
+        </ul>
+
+        <div class="share__extras">
+          <ion-button fill="clear" class="share__extra" (click)="shareTextOnly()">
+            <ion-icon slot="start" [icon]="icons.text"></ion-icon>
+            Text only
+          </ion-button>
+          <ion-button fill="clear" class="share__extra" (click)="saveCard()">
+            <ion-icon slot="start" [icon]="icons.download"></ion-icon>
+            Save card
+          </ion-button>
+          <ion-button fill="clear" class="share__extra" (click)="copyText()">
+            <ion-icon slot="start" [icon]="icons.copy"></ion-icon>
+            Copy
+          </ion-button>
+        </div>
+      </section>
+
+      <!-- Play again -->
+      <div class="stack">
+        <ion-button expand="block" class="cta cta--ghost" (click)="playAgain()">
+          <ion-icon slot="start" [icon]="icons.refresh"></ion-icon>
+          Play again · {{ game.genre.name }}
+        </ion-button>
+        <ion-button expand="block" class="cta cta--soft" (click)="newGame()">
+          Change genre, format or rounds
+        </ion-button>
+      </div>
+    </div>
+  }
+</ion-content>
+
+<ion-toast
+  [isOpen]="toast().open"
+  [message]="toast().message"
+  duration="2400"
+  position="bottom"
+  (didDismiss)="closeToast()"
+></ion-toast>
